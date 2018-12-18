@@ -18,10 +18,23 @@ class DBManager
     public function getConnection(){
         $this->connection = null;
 
+        if(!empty($_ENV["DB_HOST"])) {
+            $this->host = $_ENV["DB_HOST"];
+        }
+        if(!empty($_ENV["DB_SCHEMA"])) {
+            $this->database = $_ENV["DB_SCHEMA"];
+        }
+        if(!empty($_ENV["DB_USERNAME"])) {
+            $this->username = $_ENV["DB_USERNAME"];
+        }
+        if(!empty($_ENV["DB_PASSWORD"])) {
+            $this->password = $_ENV["DB_PASSWORD"];
+        }
+
         try{
             $this->connection = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->database, $this->username, $this->password);
         }catch(PDOException $exception){
-            echo "Connection error: " . $exception->getMessage();
+            die("Connection error: " . $exception->getMessage());
         }
 
         return $this->connection;

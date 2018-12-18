@@ -1,6 +1,7 @@
 {
   "require": {
-    "hashids/hashids": "3.0.0"
+    "hashids/hashids": "3.0.0",
+    "vlucas/phpdotenv": "^2.5"
   },
   "autoload": {
     "psr-0": {"": "src/"}

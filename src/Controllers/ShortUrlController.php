@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__FILE__) . '/../bootstrap.php';
-require_once dirname(__FILE__) . '/./DBManager.php';
+require_once dirname(__FILE__) . '/../../bootstrap.php';
+require_once dirname(__FILE__) . '/../DBManager.php';
 
 use Hashids\Hashids;
 
@@ -15,9 +15,6 @@ class ShortUrlController
     public function __construct(){
         $db_manager = new DBManager();
         $this->connection = $db_manager->getConnection();
-        if ($this->connection->connect_error) {
-            die("Cannot connect to Database: " . $this->connection->connect_error);
-        }
         $this->hashids = new Hashids('', 8);
     }
 
