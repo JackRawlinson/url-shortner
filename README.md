@@ -1,4 +1,6 @@
 # demo url-shortner
+Demo available on [AWS](ec2-18-202-239-19.eu-west-1.compute.amazonaws.com)
+
 ## Setup Instructions
 
 ### With Docker
