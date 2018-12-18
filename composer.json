@@ -1,0 +1,8 @@
+{
+  "require": {
+    "hashids/hashids": "3.0.0"
+  },
+  "autoload": {
+    "psr-0": {"": "src/"}
+  }
+}
