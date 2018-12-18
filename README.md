@@ -20,7 +20,7 @@ Navigate to 127.0.0.1:8090
 ### Other Method
 
 make sure php-mysql php-bcmath are installed
-edit .env with mysql credentials
+edit .env with mysql credentials (DB_HOST has a non standard port set by default 3305)
 
 ```
 git clone https://github.com/JackRawlinson/url-shortner.git
