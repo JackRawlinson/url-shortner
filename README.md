@@ -1,5 +1,4 @@
 # demo url-shortner
-Demo available on [AWS](http://18.202.239.19)
 
 URL's should be in 'http://example.com' format
 
